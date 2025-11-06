@@ -167,6 +167,17 @@
             </div>
         </section>
 
+        <!-- YouTube Videos Section -->
+        <section class="youtube-section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">📺 Learning Videos</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    Watch educational videos to enhance your learning journey
+                </p>
+                <div id="youtube-videos" class="youtube-container"></div>
+            </div>
+        </section>
+
         <!-- Quick Stats Section -->
         <section class="stats-section">
             <div class="container">
@@ -225,9 +236,21 @@
         </svg>
     </button>
 
+    <!-- Load scripts in order -->
+    <script src="js/storage.js"></script>
+    <script src="js/browser.js"></script>
+    <script src="js/thirdparty.js"></script>
+    <script src="js/welcome.js"></script>
     <script src="js/script.js" defer></script>
     <script src="js/main.js"></script>
     <script>
+        // Initialize YouTube videos on index page
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof YouTubeService !== 'undefined') {
+                YouTubeService.init();
+            }
+        });
+
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function() {
                 navigator.serviceWorker.register('/js/service-worker.js');
