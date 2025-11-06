@@ -11,23 +11,7 @@
 </head>
 <body>
     <!-- Navigation -->
-    <header class="navbar">
-        <nav class="container nav-container">
-            <div class="logo" data-aos="fade-right">
-                <span class="logo-icon">📚</span>
-                <span class="logo-text">My Journal</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li><a href="journal.html" class="nav-link">Journal</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-            </ul>
-            <button class="mobile-toggle" aria-label="Toggle navigation">
-                <span class="hamburger"></span>
-            </button>
-        </nav>
-    </header>
+    <header class="navbar"></header>
 
     <!-- Hero Section -->
     <main>
@@ -35,12 +19,13 @@
             <div class="container hero-container">
                 <div class="hero-content" data-aos="fade-up">
                     <h1 class="hero-title">Hi, I'm <span class="highlight">Mohammad Sarif Khan</span> 👋</h1>
-                    <p class="hero-subtitle">Welcome to my learning journey</p>
+                   
                     <p class="hero-description">
                         This is my personal learning journal where I document my progress, 
                         share insights, and showcase projects as I dive deep into web development 
                         and programming. Join me as I grow and learn!
                     </p>
+                    <p class="hero-subtitle">Welcome to my learning journey <span id="current-date"></span></p>
                     <div class="hero-buttons">
                         <a href="journal.html" class="btn btn-primary">View Journal</a>
                         <a href="projects.html" class="btn btn-secondary">See Projects</a>
@@ -240,6 +225,7 @@
         </svg>
     </button>
 
+    <script src="js/script.js" defer></script>
     <script src="js/main.js"></script>
     <script>
         if ('serviceWorker' in navigator) {
